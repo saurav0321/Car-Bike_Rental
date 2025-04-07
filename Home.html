@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saurav Motor - Easy Car & Bike Rental Services</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+   <!-- Navbar -->
+<nav class="navbar navbar-expand-lg" style="background-color: #f5a623;">
+    <div class="container">
+        <!-- Brand Name -->
+        <a class="navbar-brand fw-bold" href="#">Saurav Motor</a>
+
+        <!-- Toggle Button for Mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link fw-bold" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link fw-bold" href="faq.html">FAQs</a></li>
+                <li class="nav-item"><a class="nav-link fw-bold" href="Contact.html">Contact Us</a></li>
+                <li class="nav-item"><a class="nav-link fw-bold" href="#">Blog</a></li>
+<!-- Location Dropdown -->
+<li class="nav-item dropdown">
+    <a id="selectedCity" class="btn btn-outline-dark dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown">
+        <i class="fas fa-map-marker-alt"></i> Select City
+    </a>
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item city-option" href="#" data-city="Jaipur">Jaipur</a></li>
+        <li><a class="dropdown-item city-option" href="#" data-city="Udaipur">Udaipur</a></li>
+        <li><a class="dropdown-item city-option" href="#" data-city="Shimla">Shimla</a></li>
+        <li><a class="dropdown-item city-option" href="#" data-city="Amritsar">Amritsar</a></li>
+    </ul>
+</li>
+                <!-- Login Button -->
+                <li class="nav-item">
+                    <a class="btn btn-dark text-white fw-bold ms-2" href="login.html">
+                        <i class="fas fa-sign-in-alt"></i> Login or Signup
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Include Font Awesome for Icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    
+<header class="hero-section">
+    <div class="container">
+        <div class="search-box row">
+            <div class="col-md-2">
+                <label>Vehicle Type</label>
+                <select class="form-control">
+                    <option>All</option>
+                    <option>Bike</option>
+                    <option>Car</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label>Book At</label>
+                <select class="form-control">
+                    <option>Daily</option>
+                    <option>Hourly</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label>Your Nearest Area</label>
+                <input type="text" class="form-control" placeholder="Enter location">
+            </div>
+            <div class="col-md-2">
+                <label>Pick-up Date</label>
+                <input type="date" class="form-control">
+            </div>
+            <div class="col-md-2">
+                <label>Pick-up Time</label>
+                <input type="time" class="form-control">
+            </div>
+            <div class="col-md-2">
+                <label>&nbsp;</label>
+                <button class="btn btn-dark w-100">Search</button>
+            </div>
+        </div>
+    </div>
+</header>
+    
+    <!-- Vehicle Listings -->
+<section class="container mt-5">
+    <h2 class="text-center">Available Vehicles</h2>
+    
+    <!-- Available Cars -->
+<h3 class="mt-4">Cars</h3>
+<div class="row" id="carList">
+    <div class="col-md-4 car-item" data-location="Jaipur">
+        <div class="card">
+            <img src="images/hyundai_creta.webp" class="card-img-top" alt="Hyundai Creta">
+            <div class="card-body">
+                <h5 class="card-title">Hyundai Creta</h5>
+                <p>5 people | ₹5200/day</p>
+                <a href="#" class="btn btn-success">Book Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 car-item" data-location="Udaipur">
+        <div class="card">
+            <img src="images/tata_nexon.webp" class="card-img-top" alt="Tata Nexon">
+            <div class="card-body">
+                <h5 class="card-title">Tata Nexon</h5>
+                <p>5 people | ₹4800/day</p>
+                <a href="#" class="btn btn-success">Book Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 car-item" data-location="Shimla">
+        <div class="card">
+            <img src="images/maruti_fronx.webp" class="card-img-top" alt="Maruti Suzuki Fronx">
+            <div class="card-body">
+                <h5 class="card-title">Maruti Suzuki Fronx</h5>
+                <p>5 people | ₹4200/day</p>
+                <a href="#" class="btn btn-success">Book Now</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Available Bikes -->
+<h3 class="mt-4">Bikes</h3>
+<div class="row" id="bikeList">
+    <div class="col-md-4 bike-item" data-location="Jaipur">
+        <div class="card">
+            <img src="images/royal_enfield_himalayan.webp" class="card-img-top" alt="Royal Enfield Himalayan">
+            <div class="card-body">
+                <h5 class="card-title">Royal Enfield Himalayan</h5>
+                <p>₹5200/day</p>
+                <a href="booking.html" class="btn btn-success">Book Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 bike-item" data-location="Udaipur">
+        <div class="card">
+            <img src="images/bajaj_dominar_400.webp" class="card-img-top" alt="Bajaj Dominar 400">
+            <div class="card-body">
+                <h5 class="card-title">Bajaj Dominar 400</h5>
+                <p>₹2200/day</p>
+                <a href="#" class="btn btn-success">Book Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 bike-item" data-location="Shimla">
+        <div class="card">
+            <img src="images/ktm_adventure_390.webp" class="card-img-top" alt="KTM Adventure 390">
+            <div class="card-body">
+                <h5 class="card-title">KTM Adventure 390</h5>
+                <p>₹4200/day</p>
+                <a href="#" class="btn btn-success">Book Now</a>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+    <!-- Testimonials Section -->
+    <section class="container mt-5">
+        <h2 class="text-center">Customer Reviews</h2>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <blockquote class="blockquote">
+                    <p>"Amazing service! The bike was in excellent condition."</p>
+                    <footer class="blockquote-footer">Rahul Sharma</footer>
+                </blockquote>
+            </div>
+            <div class="col-md-4">
+                <blockquote class="blockquote">
+                    <p>"Booking was easy and hassle-free. Highly recommend!"</p>
+                    <footer class="blockquote-footer">Sneha Kumar</footer>
+                </blockquote>
+            </div>
+            <div class="col-md-4">
+                <blockquote class="blockquote">
+                    <p>"Great customer support and well-maintained cars."</p>
+                    <footer class="blockquote-footer">Rohan Thakur</footer>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="container mt-5">
+        <div class="row align-items-center faq-container">
+            
+          <!-- Left Side - Image -->
+<div class="col-md-5 d-flex justify-content-center">
+    <img src="images/faq-illustration.jpg" alt="FAQ Illustration" class="img-fluid" style="width: 300px; height: auto;">
+</div>
+
+
+    
+            <!-- Right Side - FAQ Accordion -->
+            <div class="col-md-7">
+                <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+                <div class="accordion" id="faqAccordion">
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                What types of bikes are available for rent?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We offer a variety of bikes including scooters, cruisers, and sports bikes. You can choose based on your preference and riding experience.
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                What documents do I need to rent a bike?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                You need a valid driving license and a government-issued ID.
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                How is the rental pricing structured?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                The pricing is based on rental duration, vehicle type, and any additional services.
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                Can I return the bike at a different location?
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, but additional charges may apply depending on the location.
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                Are helmets provided with the bike?
+                            </button>
+                        </h2>
+                        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, we provide helmets as part of the rental for safety.
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+    
+        </div>
+    </section>
+
+     <!-- Achievements Section -->
+     <section class="achievements">
+        <h2>OUR REACH</h2>
+        <p>Achievements</p>
+        <div class="achievement-boxes">
+            <div class="box">
+                <img src="images/happy-customers.png" alt="Happy Customers">
+                <h3>10000+</h3>
+                <p>Happy Customers</p>
+            </div>
+            <div class="box">
+                <img src="images/rides-complete.png" alt="Rides Complete">
+                <h3>9000+</h3>
+                <p>Rides Complete</p>
+            </div>
+            <div class="box">
+                <img src="images/vehicles.png" alt="Vehicles">
+                <h3>100+</h3>
+                <p>Vehicles</p>
+            </div>
+            <div class="box">
+                <img src="images/experience.png" alt="Experience">
+                <h3>3+</h3>
+                <p>Years Experience</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviceable Areas -->
+    <section class="service-areas">
+        <h3>Serviceable Areas</h3>
+        <ul>
+            <li>Jaipur</li>
+            <li>Udaipur</li>
+            <li>Shimla</li>
+            <li>Amritsar</li>
+        </ul>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="about">
+                <h3>Saurav Motor</h3>
+                <p>Experience urban freedom with our hourly bike and car rentals. Explore streets, markets, and scenic vistas.</p>
+                <div class="social-icons">
+                    <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="images/instagram-icon.png" alt="Instagram"></a>
+                    <a href="#"><img src="images/youtube-icon.png" alt="YouTube"></a>
+                </div>
+            </div>
+            <div class="links">
+                <h4>Quick Links</h4>
+                <a href="Home.html">Home</a>
+                <a href="Contact.html">Contact Us</a>
+                <a href="#">Blog</a>
+            </div>
+            <div class="cities">
+                <h4>Cities</h4>
+                <a href="#">Jaipur</a>
+                <a href="#">Udaipur</a>
+                <a href="#">Jodhpur</a>
+                <a href="#">Delhi</a>
+            </div>
+            <div class="policies">
+                <h4>Policies</h4>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Rental Agreement</a>
+                <a href="#">Refund & Cancellation</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="faq.html">FAQs</a>
+            </div>
+            <div class="contact">
+                <h4>Contact Us</h4>
+                <p>D4, Road no. 2, Near Gate 1, Transport Nagar, Transport Nagar, Patna, Bihar</p>
+                <p>Email: support@sauravmotor.com</p>
+                <p>📞 +91 7300048128 | +91 7300061035</p>
+            </div>
+        </div>
+        <p class="footer-bottom">© 2025 Saurav Motor | Powered by Elektron</p>
+    </footer>
+    
+    <script src="Script.js"></script>
+
+</body>
+</html>

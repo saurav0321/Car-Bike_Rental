@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saurav Motor - Easy Car & Bike Rental Services</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <!-- Navbar -->
+<nav class="navbar navbar-expand-lg" style="background-color: #f5a623;">
+    <div class="container">
+        <!-- Brand Name -->
+        <a class="navbar-brand fw-bold" href="#">Saurav Motor</a>
+
+        <!-- Toggle Button for Mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link fw-bold" href="Home.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link fw-bold" href="#">FAQs</a></li>
+                <li class="nav-item"><a class="nav-link fw-bold" href="Contact.html">Contact Us</a></li>
+                <li class="nav-item"><a class="nav-link fw-bold" href="#">Blog</a></li>
+
+                <!-- Location Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="btn btn-outline-dark dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown">
+                        <i class="fas fa-map-marker-alt"></i> Jaipur
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Udaipur</a></li>
+                        <li><a class="dropdown-item" href="#">Shimla</a></li>
+                        <li><a class="dropdown-item" href="#">Amritsar</a></li>
+                    </ul>
+                </li>
+
+                <!-- Login Button -->
+                <li class="nav-item">
+                    <a class="btn btn-dark text-white fw-bold ms-2" href="#">
+                        <i class="fas fa-sign-in-alt"></i> Login or Signup
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+   <!-- FAQ Section -->
+   <div class="faq-header">Frequently Asked Questions</div>
+   <div class="faq-container">
+       <div class="faq-item">
+           <h5>1. What is your payment policy for renting a bike?</h5>
+           <p class="faq-answer">Eazyrental only accepts online payments. We charge hourly rates based on weekdays, weekends, and peak seasons.</p>
+       </div>
+       <div class="faq-item">
+           <h5>2. Is booking cancellation allowed?</h5>
+           <p class="faq-answer">Yes, bookings can be canceled from the booking page. Please check our cancellation policy.</p>
+       </div>
+       <div class="faq-item">
+           <h5>3. What is your booking cancellation policy?</h5>
+           <p class="faq-answer">
+               - Cancellation more than 24 hours before booking: ₹100 charge.<br>
+               - Cancellation within 24 hours: ₹100 or 50% of the booking fee (whichever is greater).<br>
+               - Cancellation after booking start: No refund.
+           </p>
+       </div>
+       <div class="faq-item">
+           <h5>4. Can I change my bike after booking?</h5>
+           <p class="faq-answer">Yes, you can change the bike using the "Exchange Vehicle" option before the booking starts.</p>
+       </div>
+       <div class="faq-item">
+           <h5>5. What happens if I return the bike late?</h5>
+           <p class="faq-answer">A late return charge of ₹200 per hour will be applied in addition to the full hourly rental rate.</p>
+       </div>
+       <div class="faq-item">
+           <h5>6. Is fuel included with the rental?</h5>
+           <p class="faq-answer">No, fuel is not included. You will receive enough fuel to reach the nearest petrol pump.</p>
+       </div>
+       <div class="faq-item">
+           <h5>7. What is the minimum age to rent a bike?</h5>
+           <p class="faq-answer">The minimum age requirement is 21 years.</p>
+       </div>
+       <div class="faq-item">
+           <h5>8. Do you provide a helmet?</h5>
+           <p class="faq-answer">Yes, we provide one complimentary helmet. Additional helmets cost ₹50 each.</p>
+       </div>
+       <div class="faq-item">
+           <h5>9. Can I take the rented bike across international borders?</h5>
+           <p class="faq-answer">No, our bikes are not allowed outside India.</p>
+       </div>
+       <div class="faq-item">
+           <h5>10. What happens in case of an accident?</h5>
+           <p class="faq-answer">The customer is liable for 100% of damage costs and any business loss due to downtime.</p>
+       </div>
+   </div>
+
+   <!-- JavaScript for Toggle FAQ -->
+   <script>
+       document.addEventListener("DOMContentLoaded", function () {
+           const faqItems = document.querySelectorAll(".faq-item");
+
+           faqItems.forEach((item) => {
+               item.addEventListener("click", function () {
+                   let answer = this.querySelector(".faq-answer");
+                   let isVisible = answer.style.display === "block";
+                   
+                   // Hide all answers
+                   document.querySelectorAll(".faq-answer").forEach(ans => ans.style.display = "none");
+
+                   // Show or hide the clicked one
+                   answer.style.display = isVisible ? "none" : "block";
+               });
+           });
+       });
+   </script>
+
+</body>
+</html>

@@ -1,0 +1,174 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1rem;
+  padding: 10px;
+}
+
+.btn-warning {
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero-section {
+  background: url('images/bg.jpg') no-repeat center center/cover;
+  padding: 100px 0;
+}
+
+.search-box {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-box label {
+  font-weight: bold;
+  display: block;
+}
+
+.search-box .form-control {
+  border-radius: 5px;
+}
+
+.search-box button {
+  margin-top: 5px;
+}
+
+/* Vehicle Listings */
+.card {
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Achievements Section */
+.achievements {
+  text-align: center;
+  padding: 40px;
+}
+
+.achievement-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.box {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 200px;
+}
+
+.box img {
+  width: 50px;
+  height: 50px;
+}
+
+/* Serviceable Areas */
+.service-areas {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.service-areas ul {
+  list-style: none;
+  padding: 0;
+}
+
+.service-areas li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+/* Footer */
+footer {
+  background-color: black;
+  color: white;
+  padding: 30px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-container div {
+  width: 18%;
+}
+
+.footer-container h4 {
+  margin-bottom: 10px;
+}
+
+.footer-container a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.social-icons a img {
+  width: 25px;
+  margin: 5px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+}
+body {
+  background: #f8f9fa;
+  font-family: Arial, sans-serif;
+}
+ /* FAQ Styling */
+ .faq-header {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 20px 0;
+}
+.faq-container {
+  max-width: 800px;
+  margin: auto;
+}
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  cursor: pointer;
+}
+.faq-item h5 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+.faq-answer {
+  display: none;
+  padding: 5px 0;
+  color: #555;
+}
